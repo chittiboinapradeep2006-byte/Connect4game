@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="700"
+            prefHeight="450"
+            xmlns="http://javafx.com/javafx/18"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.dep.controller.ScoreBoardController">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="260"
+               layoutY="20"
+               text="SCOREBOARD"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <!-- Table -->
+        <TableView fx:id="tblScore"
+                   layoutX="20"
+                   layoutY="70"
+                   prefWidth="660"
+                   prefHeight="320">
+
+            <columns>
+                <TableColumn fx:id="colPlayer" text="Player" prefWidth="140"/>
+                <TableColumn fx:id="colPlayed" text="Played" prefWidth="80"/>
+                <TableColumn fx:id="colWins" text="Wins" prefWidth="80"/>
+                <TableColumn fx:id="colDraws" text="Draws" prefWidth="80"/>
+                <TableColumn fx:id="colLosses" text="Losses" prefWidth="80"/>
+                <TableColumn fx:id="colBestMoves" text="Best Moves" prefWidth="120"/>
+            </columns>
+
+        </TableView>
+
+        <!-- Clear Button -->
+        <Button text="CLEAR SCOREBOARD"
+                layoutX="270"
+                layoutY="400"
+                onAction="#btnClearOnAction"/>
+
+    </children>
+</AnchorPane>
